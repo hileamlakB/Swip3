@@ -1,4 +1,4 @@
-let loginButton = document.body.querySelector(".button-cta");
+let loginButton = document.body.querySelector(".button-cta2");
 const executing = browser.tabs.executeScript({
     code: `
     (function checkMeta(){
