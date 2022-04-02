@@ -1,0 +1,108 @@
+
+
+.transaction-info{ 
+
+        background: rgba(196, 196, 196, 0.12);
+        border-radius: 5px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding:10px;
+        margin-bottom: 20px;
+    
+}
+.transaction-info p{ 
+    margin-top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    letter-spacing: 0.06em;
+    color: #8D8D8D;
+}
+
+.transaction-info p span { 
+    color: #17B4E6;
+    margin-left: 10px;
+    font-size: 16px;
+    padding: 0px 10px;
+    
+    background: rgba(23, 180, 230, 0.15);
+
+    border: 1px dashed #17B4E6;
+    box-sizing: border-box;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 5px;
+    
+}
+.transaction_input,  #pay_amount { 
+
+    border: 0.5px solid #8D8D8D !important; 
+    color : #8D8D8D; 
+    padding: 8px 12px; 
+    border-radius: 5px;
+    min-width:80% !important;
+    padding: 5px;
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.06em;
+}
+#pay_amount{ 
+    min-width:5% !important;
+}
+.transaction_input:focus { 
+
+    border: 0.5px solid rgba(23, 180, 230, 1) !important; 
+    color : rgba(23, 180, 230, 1) ; 
+}
+.transaction-info p input{
+    border: none;
+    background: none;
+    width: 20px;
+}
+
+
+
+
+.transaction-info p input:focus{
+   
+outline: none !important;
+    
+}
+
+.payment-failed{ 
+    margin-top: 30px;
+    text-align: center;
+    border: 1px dashed #E6AC17;
+    background: rgba(230, 172, 23, 0.29);
+    color: #C99100;
+    padding: 10px 0px;
+    min-width: 55%;
+    
+
+}
+
+.payment-successful{ 
+    margin-top: 30px;
+    text-align: center;
+    background: rgba(23, 180, 230, 0.15);
+    border: 1px dashed #17B4E6;
+    box-sizing: border-box;
+    padding: 10px 0px;
+    min-width: 55%;
+    
+
+}
+
+.off{ 
+    visibility:  hidden !important;
+}

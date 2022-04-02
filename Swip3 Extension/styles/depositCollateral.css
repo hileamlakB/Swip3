@@ -1,0 +1,158 @@
+
+
+#accountPk{
+    overflow-wrap: break-word;
+}
+
+
+
+
+/* title */
+
+
+
+/* small note here */
+
+.small-note{ 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+
+    border-left: 2px solid  rgba(23, 180, 230, 0.58); 
+    color: #878787;
+    padding-left: 15px;
+
+    margin-bottom: 50px;
+    
+}
+
+
+/* input section: nft  or coins */
+
+.select-type{ 
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    color: #8D8D8D;
+}
+
+.select-type div{ 
+    cursor: pointer;
+    padding: 10px 0px;
+    width: 100px;
+    background: rgba(196, 196, 196, 0.12);
+    border-radius: 5px;
+    margin: 0 10px;
+    text-align: center;
+    
+}
+
+  .select-type input{ 
+    display: none; 
+}  
+
+
+.selected{ 
+    background: rgba(23, 180, 230, 0.15) !important;
+    outline: 1px dashed #17B4E6;
+    color: rgba(23, 180, 230)
+}
+
+
+/* input fields */
+.input { 
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    /* align-items: center; */
+    flex-direction: column;
+    margin: 20px 20px;
+    color: #878787;
+
+}
+
+.input input { 
+    border: 1.5px solid #17B4E6;
+    border-radius: 5px;
+    padding: 10px 20px;
+    outline: none;
+}
+
+/*   here is our button */
+
+.button-cta button{ 
+    color: white;
+    background-color: #17B4E5;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+    box-shadow: 0px 3px 0px #008DB9;
+    padding: 10px 50px;
+    min-width: 100%;
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    
+}
+
+
+.button-cta button:active{ 
+    transform: scale(0.98);
+}
+.button-cta{ 
+    width: 55%;
+}
+
+
+
+/* modal to display the image */
+#modal{ 
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    bottom:0;
+    background: rgba(0, 0, 0, 0.85);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal nft-card{ 
+   
+    margin-bottom: 30px;
+}
+
+.off{ 
+    visibility: hidden;
+}
+.on{ 
+    visibility: visible;
+}
+
+
+.account-not-found{ 
+    margin-top: 30px;
+    text-align: center;
+    border: 1px dashed #E6AC17;
+    background: rgba(230, 172, 23, 0.29);
+    color: #C99100;
+    padding: 10px 0px;
+    min-width: 55%;
+    
+
+}

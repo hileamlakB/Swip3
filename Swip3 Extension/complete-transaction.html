@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/completeTransaction.css">
+    <title>Complete transaction</title>
+</head>
+<body>
+    <div class="container-main">
+        <div class="header">
+            <img src="images/Group 3logo_swip3.png" alt="">
+            <div class="back"> < Back</div>
+        </div>
+    
+        <div class="user-account" id="user-account-copy">
+            <p>User Account: 
+                <span style="margin-left: 20px;" id = 'accountPk'></span> ...
+                <i class="fa-regular fa-copy"  ></i>
+            </p>
+        </div>
+    
+    
+        <h1 class = "main-title">Transfer money</h1>
+
+        <div class="transaction-info">
+            <div>
+                <p>To: <input id="to_address" class="transaction_input" type="text" placeholder="wehmmcoin.eth"> </p>
+                <p>Preceed to pay an amount: <i class="fab fa-ethereum"></i><input  id="pay_amount" type="text" placeholder="2.3"></p>
+                <br>
+                <p>Available Balance: <span class = "eth-amount"><i class="fab fa-ethereum"></i>6</span></p>
+                <p>Used Amount: <span class = "eth-amount"><i class="fab fa-ethereum"></i>9</span></p>
+            </div>  
+        </div>
+        
+       
+
+        <div class="button-cta" id = "pay"> <button>pay</button> </div>
+        
+        <div class="payment-failed off">
+            <p>Account Not Found. <br> Try again.</p>
+        </div>
+
+        
+    
+        <script src="scripts/main.js"></script>
+        <script src="scripts/shared.js"></script>
+       <script src="scripts/complete_transaction.js"></script>
+    </div>
+</body>
+</html>

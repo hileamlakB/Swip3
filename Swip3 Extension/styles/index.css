@@ -1,0 +1,132 @@
+.loading{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white ;
+
+}
+.loading p{ 
+    position: absolute;
+    left: 50%; 
+    top: 60%;
+    transform: translateX(-50%);
+}
+.inner-loading{
+    position: absolute;
+    left: 50%; 
+    top: 50%;
+    width:  10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(23, 180, 230, 0.58);
+    border-radius:50%;
+    z-index: 1;
+    animation: loader 1s ease-in  infinite ;
+}
+
+@keyframes loader {
+    0% {
+        box-shadow: 0px 0px 2px 0px rgba(23, 180, 230, 0.18);
+    }
+   
+    100% {
+        
+        box-shadow: 0px 0px 2px 30px rgba(23, 180, 230, 0.18);
+    }
+  }
+
+
+/* the logo image */
+
+.logo img{
+  
+    width: 50%;
+
+}
+.logo{ 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* motto */
+
+.motto h1{ 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 39px;
+    text-align: center;
+
+}
+
+.motto{ 
+    margin-bottom: 90px;
+}
+
+
+/* Account not found */
+
+.account-not-found{ 
+    margin-top: 30px;
+    text-align: center;
+    border: 1px dashed #E6AC17;
+    background: rgba(230, 172, 23, 0.29);
+    color: #C99100;
+    padding: 10px 0px;
+    min-width: 55%;
+    
+
+}
+
+.off{ 
+    display: none !important;
+}
+
+
+.loader-container{ 
+        min-height: 400px;
+}
+
+/* user account */
+.user-account{ 
+    background: rgba(196, 196, 196, 0.12);
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 7% 0;
+
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.user-account:active{ 
+    background: rgba(196, 196, 196, 0.22);
+    
+}
+
+.user-account p{ 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+
+    letter-spacing: 0.06em;
+
+    color: #8D8D8D;
+
+}
+
+.user-account p i{ 
+    margin-left: 20px;
+
+}

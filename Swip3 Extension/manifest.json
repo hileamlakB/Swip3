@@ -1,0 +1,41 @@
+{
+
+    "manifest_version": 2,
+    "name": "Swip3",
+    "description": "Credit payment extension",
+    "version": "1.0",
+  
+    "icons": {
+        "16": "/images/Group 3logo_swip3.png",
+        "32": "/images/Group 3logo_swip3.png",
+        "48": "/images/Group 3logo_swip3.png",
+        "128": "/images/Group 3logo_swip3.png"
+      },
+    "permissions": ["storage", "activeTab", "tabs","<all_urls>", "clipboardRead", "clipboardWrite"],
+    "browser_action": {
+      "default_popup": "/index.html",
+      "default_icon": {
+         "16": "/images/Group 3logo_swip3.png",
+         "32": "/images/Group 3logo_swip3.png",
+         "48": "/images/Group 3logo_swip3.png",
+         "128": "/images/Group 3logo_swip3.png"
+       }
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "swip3y@example.com"
+        }
+    },
+    "background": {
+        "scripts": ["scripts/background.js"]
+      },
+      "content_security_policy": "default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+
+      "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["scripts/updateContract.js"]
+        }
+      ]
+}

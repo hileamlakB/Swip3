@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/depositCollateral.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <title>Deposit Collateral</title>
+</head>
+<body>
+
+    
+    <div class="container-main">
+        <div class="header">
+            <img src="images/Group 3logo_swip3.png" alt="">
+            <div class="back"> < Back</div>
+        </div>
+    
+        <div class="user-account" id="user-account-copy">
+            <p>User Account: 
+                <span style="margin-left: 20px;" id = 'accountPk'> </span> ...
+                <i class="fa-regular fa-copy"  ></i>
+            </p>
+        </div>
+    
+    
+        <h1 class = "main-title"> Deposit Collateral</h1>
+        
+        <div class = "small-note"><p>Please deposit collateral to make payments.
+            We don’t store any personal information about our clients other than public keys. </p>
+        </div>
+
+        <p>What do you want to deposit?</p>
+        <div class="select-type">
+            
+            <div class="choice" id = "NFT" >NFT</div>
+
+            <div class="choice" id = "Coins" ><i class="fab fa-ethereum" style="margin-right: 5px"></i>Coins</div>
+            
+        </div>
+        <div class="input">
+            <p id = "amount-address-text">Please select above</p>
+            <input id = "amount-address" type="text">
+        </div>
+
+        <div class="button-cta" id = "continue"  > <button>Continue</button> </div>
+        
+        <div class="account-not-found off" id = "errorMSG">
+            <p>Deposit Failed. <br> Try again.</p>
+        </div>
+
+        <div id="modal"  class = "off" >
+            <div class="container-main ">
+                
+                <nft-card
+                contractAddress="0x1301566b3cb584e550a02d09562041ddc4989b91"
+                tokenId="28"
+                class = "off"
+                id = "nft-id ">
+                </nft-card>
+        
+
+                <div class="button-cta" id = "confirm"> <button>Confirm</button> </div>
+            </div>
+        </div>
+
+       
+    </div>
+   
+    <script src="scripts/shared.js"></script>
+    <script src="scripts/create_contract.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/deposit-script.js"></script>
+   
+    
+
+</body>
+</html>
