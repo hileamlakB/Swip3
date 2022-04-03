@@ -1,0 +1,283 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_expiration_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_smart_contract",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_credit_limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_APR",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "Expired",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "ContractTerminated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "Swip3CustomerMessage",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "acceptPayment",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_lending_poolGate",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_lending_poolID",
+						"type": "uint256"
+					}
+				],
+				"name": "activate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "availableCredit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "expiration_date",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "reciever_address",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "requestPayment",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "state",
+				"outputs": [
+					{
+						"internalType": "enum Swip3Customer.State",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "terminate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "updateCredit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "updateExpiration",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawOverPayed",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "Hileamlak Yitayew",
+			"details": "Except view function only parent contract and user can access this contract ",
+			"kind": "dev",
+			"methods": {
+				"activate(address,uint256)": {
+					"details": "Activation connects smart contract to its designated lending pool",
+					"params": {
+						"_lending_poolGate": "address of lending pool gat"
+					}
+				}
+			},
+			"title": "Swip3Customer - an agreement between the swip3 credit service and customer",
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"Expired()": [
+					{
+						"notice": "Contract has expired"
+					}
+				]
+			},
+			"events": {
+				"ContractTerminated()": {
+					"notice": "Contract has been terminated"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"activate(address,uint256)": {
+					"notice": "A started contract must be activated to start working"
+				}
+			},
+			"notice": "The terms of this contract will dictate the transfer of credit ",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Swip3Customer.sol": "Swip3Customer"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LendingPool.sol": {
+			"keccak256": "0x1adf5c0bfc5b9537975a859078c7e0f290e657be9f11f731793b7ceb73605f32",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://864c41d7b7a674d899c6f725c6731090a78126b72e895cfbe24f0f14be9213d4",
+				"dweb:/ipfs/QmZpKmyQPC3eMUce1R2EvVrafEQQuFx9qwqizcBW5sNY8N"
+			]
+		},
+		"contracts/LendingPoolGate.sol": {
+			"keccak256": "0xac2a1fda86b055dd82c1a89b40903c0ef7477e1856b93b39b96101e880a71f75",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0900d9f3bb7525351d2fa2412ce663e9da3ecf3bc04cf86a284c43372f936843",
+				"dweb:/ipfs/Qmf7nWQdHBtetuV69fAKT2atoR71QzSGYwbvGhkc7xPHpV"
+			]
+		},
+		"contracts/SafeMath.sol": {
+			"keccak256": "0xae176a4c8445485748be1832196d9b61bc6cd1bbaaf5bf7cdcfb4f3f218cfde0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://70b6954e9e91d7d0d36641d8e567560e7d4b91548df9bc185508a7ec816840dc",
+				"dweb:/ipfs/QmW6PmzNGenqVwAsS8nK53fdHmMc42qxvqKZJLURvQLjYr"
+			]
+		},
+		"contracts/Swip3Customer.sol": {
+			"keccak256": "0xb89277ca4c601ce8193febbab3e42a3e3dbf3b684742568b04151890cdeaf7c2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0943628f90ac0d43985b507c4dde7e714576b33b6721e005a2329be6f74cf210",
+				"dweb:/ipfs/QmdzAe8ydQqnMgWWb5MqPSdrh3m4FfeCLm4PEKRSHTxU3d"
+			]
+		}
+	},
+	"version": 1
+}

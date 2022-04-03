@@ -1,0 +1,256 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "total_users",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "lending_pool_address",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "related",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "token",
+						"type": "uint256"
+					}
+				],
+				"name": "LendingPoolGateMessage",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contract_address",
+						"type": "address"
+					}
+				],
+				"name": "append2WhiteList",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "deleteFromWhiteList",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lending_pool",
+				"outputs": [
+					{
+						"internalType": "contract LendingPool",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "max_nuser",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "parent_contract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "requester_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "reciever_address",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "payDapp",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawMoney",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Hileamlak Yitayew, Matt Tengtrakool",
+			"details": "Only whitelisted smart contracts can ask to withdraw money form lending       pools and only the smart contract contract that created this contract     can update the whitelist",
+			"kind": "dev",
+			"methods": {
+				"append2WhiteList(address)": {
+					"details": "Only parent smart contract could make this request",
+					"params": {
+						"contract_address": "Address to add to the whitelist"
+					},
+					"returns": {
+						"_0": "id returns the id contract_address should use to withdraw_money, and the status of the white list             true meaning free space is available and false meaning the opposite"
+					}
+				},
+				"deleteFromWhiteList(uint256)": {
+					"details": "Only creator smart contract can delete element from a whitelist",
+					"params": {
+						"id": "Id of smart contract to be deleted, must be already in whitelist"
+					}
+				},
+				"payDapp(uint256,address,uint256)": {
+					"details": "Only whitlisted smart contract can access this function",
+					"params": {
+						"amount": "amount of money to be transferred",
+						"reciever_address": "Adress money is to be transfered to",
+						"requester_id": "Whitlist id of smart contract provided during creation"
+					},
+					"returns": {
+						"_0": "sucess true if payment was successfull or false if it fails."
+					}
+				}
+			},
+			"title": "LendingPoolGate  ",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"append2WhiteList(address)": {
+					"notice": "Adds a new smart contract to a whitelist"
+				},
+				"deleteFromWhiteList(uint256)": {
+					"notice": "Delete an account from the whitelist"
+				},
+				"payDapp(uint256,address,uint256)": {
+					"notice": "Withdraws money from a lending pool and pays to a requested user"
+				}
+			},
+			"notice": "Transfers money from lending pool to preffered address",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/LendingPoolGate.sol": "LendingPoolGate"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LendingPool.sol": {
+			"keccak256": "0x1adf5c0bfc5b9537975a859078c7e0f290e657be9f11f731793b7ceb73605f32",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://864c41d7b7a674d899c6f725c6731090a78126b72e895cfbe24f0f14be9213d4",
+				"dweb:/ipfs/QmZpKmyQPC3eMUce1R2EvVrafEQQuFx9qwqizcBW5sNY8N"
+			]
+		},
+		"contracts/LendingPoolGate.sol": {
+			"keccak256": "0xac2a1fda86b055dd82c1a89b40903c0ef7477e1856b93b39b96101e880a71f75",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0900d9f3bb7525351d2fa2412ce663e9da3ecf3bc04cf86a284c43372f936843",
+				"dweb:/ipfs/Qmf7nWQdHBtetuV69fAKT2atoR71QzSGYwbvGhkc7xPHpV"
+			]
+		},
+		"contracts/SafeMath.sol": {
+			"keccak256": "0xae176a4c8445485748be1832196d9b61bc6cd1bbaaf5bf7cdcfb4f3f218cfde0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://70b6954e9e91d7d0d36641d8e567560e7d4b91548df9bc185508a7ec816840dc",
+				"dweb:/ipfs/QmW6PmzNGenqVwAsS8nK53fdHmMc42qxvqKZJLURvQLjYr"
+			]
+		}
+	},
+	"version": 1
+}

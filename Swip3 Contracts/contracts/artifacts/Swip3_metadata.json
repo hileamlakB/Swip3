@@ -1,0 +1,260 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "unimplemented_service",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "new_contract",
+						"type": "address"
+					}
+				],
+				"name": "ContractMessage",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "Swip3_deployer",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "gate_ids",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gate_max_nuser",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum Swip3.Assets",
+						"name": "asset_type",
+						"type": "uint8"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "factory",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "token_id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Swip3.NFTProps",
+						"name": "nft_data",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "enum Swip3.Coins",
+								"name": "coin_type",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "value",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Swip3.CoinPops",
+						"name": "coin_data",
+						"type": "tuple"
+					}
+				],
+				"name": "initateContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lending_pool_address",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "updateGateState",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "Hileamlak Yitayew",
+			"details": "Uses the Swip3Customer iterface to create Swip3 customer contracts",
+			"kind": "dev",
+			"methods": {
+				"initateContract(uint8,(address,uint256),(uint8,uint256))": {
+					"details": "Puts asset in escrow and depending on that calculates credit",
+					"params": {
+						"asset_type": "the staked asset, either nft or coin",
+						"coin_data": "if the staked asset is coin this infromation should be filled",
+						"nft_data": "if the staked asset is nft this infomation should be filled"
+					},
+					"returns": {
+						"_0": "returns contract address"
+					}
+				}
+			},
+			"title": "Swip3",
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"unimplemented_service()": [
+					{
+						"notice": "Feature isn't yet implemented"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {
+				"initateContract(uint8,(address,uint256),(uint8,uint256))": {
+					"notice": "Creates a contract between swip3 protocol and user"
+				}
+			},
+			"notice": "Creates Swip3contracts between users and iself",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Swip3.sol": "Swip3"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LendingPool.sol": {
+			"keccak256": "0x0c7cd6e7da0d359fd67b66320e4f1e7239d83c5a0acd65337f5a6990cc2da8af",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9d2cd40c3fb16b2272bfeba0f7f8e5923302649f4f1f5fae045ffc2c2f94e7b6",
+				"dweb:/ipfs/QmSyq7JsJqmPFnM6PGBsMXbNtvtEwVBqBYSWsHTXT3Q3rr"
+			]
+		},
+		"contracts/LendingPoolGate.sol": {
+			"keccak256": "0xac2a1fda86b055dd82c1a89b40903c0ef7477e1856b93b39b96101e880a71f75",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0900d9f3bb7525351d2fa2412ce663e9da3ecf3bc04cf86a284c43372f936843",
+				"dweb:/ipfs/Qmf7nWQdHBtetuV69fAKT2atoR71QzSGYwbvGhkc7xPHpV"
+			]
+		},
+		"contracts/SafeMath.sol": {
+			"keccak256": "0xae176a4c8445485748be1832196d9b61bc6cd1bbaaf5bf7cdcfb4f3f218cfde0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://70b6954e9e91d7d0d36641d8e567560e7d4b91548df9bc185508a7ec816840dc",
+				"dweb:/ipfs/QmW6PmzNGenqVwAsS8nK53fdHmMc42qxvqKZJLURvQLjYr"
+			]
+		},
+		"contracts/Swip3.sol": {
+			"keccak256": "0x2ae811924597fa07bc325d0c62b5c06db5d902d5cf717000b8cc4175fd3ca559",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://af58555e29e0ee6fe76301baf27bba6d393ea19a6bcbc14bc23341e389c67cb6",
+				"dweb:/ipfs/QmW8PDDKDhX2FzvF6Rskzz6XTy1LcfDTbajRpM8RG11s9w"
+			]
+		},
+		"contracts/Swip3Customer.sol": {
+			"keccak256": "0xb89277ca4c601ce8193febbab3e42a3e3dbf3b684742568b04151890cdeaf7c2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0943628f90ac0d43985b507c4dde7e714576b33b6721e005a2329be6f74cf210",
+				"dweb:/ipfs/QmdzAe8ydQqnMgWWb5MqPSdrh3m4FfeCLm4PEKRSHTxU3d"
+			]
+		}
+	},
+	"version": 1
+}
