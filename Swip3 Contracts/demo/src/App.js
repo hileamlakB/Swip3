@@ -65,8 +65,8 @@ function App() {
 
   return (
    <div className="main" style={{justifyContent:"center", alignItems:"center", display:"flex", flexDirection:"column"}}>
-     {/* <Typography color="primary" variant="h1">LIONHACK market place</Typography> */}
-     <Typography color="primary" variant="h1">Demo DAPP: NFT market place</Typography>
+     <Typography color="primary" variant="h1">LIONHACK market place</Typography>
+     {/* <Typography color="primary" variant="h1">Demo DAPP: NFT market place</Typography> */}
      <div style={{display:"flex"}}>
      <p style={{color:"#17B4E6"}}>{address? "Connected: " + address: "" }</p>
      <Button variant="contained" onClick={connectWallet} style={{maxWidth:"100px"}}>Connect</Button>
@@ -75,7 +75,7 @@ function App() {
      
       <div className='on-sale-nfts' style={{display:"flex", flexWrap:"wrap", justifyContent:"space-evenly", padding:"0 200px"}}>
       <NFT startPayment={startPayment} img={nft}/>
-      {/* <NFT startPayment={startPayment}  img={nft1}/>
+      <NFT startPayment={startPayment}  img={nft1}/>
       <NFT startPayment={startPayment}  img={nft3}/>
       <NFT startPayment={startPayment}  img={nft4}/>
       <NFT startPayment={startPayment}  img={nft5}/>
@@ -83,7 +83,7 @@ function App() {
       <NFT startPayment={startPayment}  img={nft7}/>
       <NFT startPayment={startPayment}  img={nft8}/>
       <NFT startPayment={startPayment}  img={nft}/>
-      <NFT startPayment={startPayment}  img={nft1}/> */}
+      <NFT startPayment={startPayment}  img={nft1}/>
 
       </div>
    </div>
