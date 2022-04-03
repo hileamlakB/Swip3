@@ -40,11 +40,12 @@ Currently, for our mvp, we use metamask as our underlying tool to handle private
  ![Demo webapp](/Assets/webdemo.png)
  The demo has a simple interface and a buy function which use our API.
 
+
  Here is what the steps a user might take look like in an event driven manner.
 
  Initially, only for the first time, a user needs to create a contract with the Swip3 system. This contract will be defining credit limits, balances due, payment cycles and much more information governing the use of the credit card. For more information on contract development, look at the files sections below. The extension page to create new contract looks like the following.
 
- ![Deposit collateral Page](/Assets/deposit.png)
+ ![Deposit collateral Page](/Assets/deposit.png)\
  Here as explained a user can use thier web3 assets as a collateral. More specifically, they can use NFTs and different kinds of COINS. For this MVP, only as a proof of concept, we are using Ethereum as the coin. But the idea is to have sister contracts in different chains and also on ethereum to recieve different coins and provide an ethereum line of credit. Once a user decides the amount and type of asset they want to use as a collatoral they can press the continue button and a smart contract between our Swip3 system and the user is created. 
 
  Once a contract is created, whenever the extension is opened the following is the page that will be displayed.
