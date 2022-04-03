@@ -27,9 +27,10 @@ function contract_str(caddress, user_address, coin_value){
   web3.eth.sendTransaction(transactionParameters)
   .then(response=>{
     let last_transaction = response.logs.pop()
+    console.log(last_transaction)
     const typesArray = [
-      {type: 'string', name: 'msg'}, 
-      {type: 'address', name: 'new_contract'} 
+      {type: 'string', name: 'message'}, 
+      {type: 'address', name: 'contract_address'} 
     ];
     let caddress = web3.eth.abi.decodeParameters(typesArray, last_transaction.data);
     

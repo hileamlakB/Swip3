@@ -2,7 +2,7 @@ let ethInstalled = false;
 // check if account exists
 let account = null;
 let contract_address = null;
-const SWIP3_address = "0x31AeC7e31c16f66E536199047A14ab69203938d3";
+const SWIP3_address = "0xb817641C173fBCf53D4f978Eb84df5b46183b028";
 
 
 const Swip3_ABI =[
@@ -22,7 +22,7 @@ const Swip3_ABI =[
       {
         "indexed": false,
         "internalType": "string",
-        "name": "msg",
+        "name": "message",
         "type": "string"
       },
       {
@@ -212,7 +212,7 @@ const Swip3Customer_ABI = [
       {
         "indexed": false,
         "internalType": "string",
-        "name": "msg",
+        "name": "message",
         "type": "string"
       }
     ],
