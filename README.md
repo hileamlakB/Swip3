@@ -85,8 +85,10 @@ We are blazing the trail for web3 credit and expanding adoption from our initial
 - The files realted to the extension can be found inside [Swip3 Extension](/Swip3%20Extension/) and detials explaining the file strucutre is found in the [Readme](/Swip3%20Extension/README.md) in that folder.
   
 - The Contracts are found in [Swip3 Contracts](/Swip3%20Contracts/) and here is a short description of all the extensions (more detials can be found in the comments themselvs).
-  - [LendingPool.sol](/Swip3%20Contracts/contracts/LendingPool.sol): A sample lending pool with basic lending pool functionalities, going to be replaced with copperations with existing lending protocols like AAVE, Compund and Maker DAO in future updates
-  - [LendingPoolGate.sol](/Swip3%20Contracts/contracts/LendingPoolGate.sol): A secruity feature to 
+  - [LendingPool.sol](/Swip3%20Contracts/contracts/LendingPool.sol): A sample lending pool with basic lending pool functionalities, going to be replaced with copperations with existing lending protocols like AAVE, Compund and Maker DAO in future updates.
+  - [LendingPoolGate.sol](/Swip3%20Contracts/contracts/LendingPoolGate.sol): A secruity feature to filter access to lending pool
+  - [Swip3.sol](/Swip3%20Contracts/contracts/Swip3.sol): Our protocol and credit system MVP.
+  - [Swip3Customer.sol](/Swip3%20Contracts/contracts/Swip3Customer.sol): Credit contract that is going to be credit between our Swip3 contract and users
 
 ## Teams
 
