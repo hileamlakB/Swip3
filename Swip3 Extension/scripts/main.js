@@ -99,7 +99,7 @@ function connectWallet(){
     
    }
    else{ 
-        loginButton.innerHTML = !ethInstalled? "<a href='https://metamask.io/'>Install MetaMask</a>" : '<button id="connect_btn" >Connect wallet </button>' 
+        loginButton.innerHTML = !ethInstalled? "<a href='https://metamask.io/'>Install Metamask</a>" : '<button id="connect_btn" >Connect wallet </button>' 
         document.body.querySelector("#connect_btn").addEventListener("click", connectWallet);
 
     }

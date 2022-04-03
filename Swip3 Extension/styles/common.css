@@ -86,9 +86,11 @@ body{
     margin-bottom: 20px;
 }
 /* call to action button */
-.button-cta button{ 
+.button-cta button, a{ 
     color: white;
     background-color: #17B4E5;
+    text-decoration: none;
+
 
     border: none;
     border-radius: 5px;
@@ -107,12 +109,14 @@ body{
     line-height: 27px;
     letter-spacing: 0.06em;
     cursor: pointer;
+    
 }
 
 
 .button-cta button:active{ 
     transform: scale(0.98);
 }
-.button-cta{ 
-    width: 55%;
+.button-cta a{ 
+    width: 55% !important;
+    margin-bottom: 50px !important;
 }
