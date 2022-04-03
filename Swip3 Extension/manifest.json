@@ -6,19 +6,19 @@
     "version": "1.0",
   
     "icons": {
-        "16": "/images/Group 3logo_swip3.png",
-        "32": "/images/Group 3logo_swip3.png",
-        "48": "/images/Group 3logo_swip3.png",
-        "128": "/images/Group 3logo_swip3.png"
+        "16": "/icons/Swip3Logo.png",
+        "32":  "/icons/Swip3Logo.png",
+        "48":  "/icons/Swip3Logo.png",
+        "128":  "/icons/Swip3Logo.png"
       },
     "permissions": ["storage", "activeTab", "tabs","<all_urls>", "clipboardRead", "clipboardWrite"],
     "browser_action": {
       "default_popup": "/index.html",
       "default_icon": {
-         "16": "/images/Group 3logo_swip3.png",
-         "32": "/images/Group 3logo_swip3.png",
-         "48": "/images/Group 3logo_swip3.png",
-         "128": "/images/Group 3logo_swip3.png"
+        "16": "/icons/Swip3Logo.png",
+        "32":  "/icons/Swip3Logo.png",
+        "48":  "/icons/Swip3Logo.png",
+        "128":  "/icons/Swip3Logo.png"
        }
     },
 
