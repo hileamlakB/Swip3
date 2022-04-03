@@ -30,8 +30,9 @@ __Never connect your wallet to DApp again:__
 Currently, for our mvp, we use metamask as our underlying tool to handle private keys, thus our app extension will require the user (dapp programer) to connect to metamask. Following are pictures of the extension and the first pages requiring metamask.
 
 ![Extension Picture](/Assets/extensionpicture.png)
- <img src="/Assets/installFirst.png" width="400">
-![Connect Wallet](/Assets/connect%20wallet.png)
+ <img src="/Assets/installFirst.png" width="400" style="margin:10px">
+  <img src="/Assets/connect%20wallet.png" width="400">
+
 
  To demonstrate how a user might interact with our system, Once metamask is installed and connected, lets introdue a simple demo Dapp. This dapp simulates an nft market place, in that it has one nft for sell. The dapp developers can choose to integrate a swip3 payment method (which we will show how to later in this section).
 
