@@ -49,7 +49,7 @@ Currently, for our mvp, we use metamask as our underlying tool to handle private
  Here as explained a user can use thier web3 assets as a collateral. More specifically, they can use NFTs and different kinds of COINS. For this MVP, only as a proof of concept, we are using Ethereum as the coin. But the idea is to have sister contracts in different chains and also on ethereum to recieve different coins and provide an ethereum line of credit. Once a user decides the amount and type of asset they want to use as a collatoral they can press the continue button and a smart contract between our Swip3 system and the user is created. 
 
  Once a contract is created, whenever the extension is opened the following is the page that will be displayed.
- ![transaction page](/Assets/complete-transaction.png)
+ ![transaction page](/Assets/complete-transaction.png)\
  Through this pay function, users can transfer money to anyone they want from thier available credit instead of thier wallet. But we would expect dapps to integrate our API's and users won't even have to see our extension after the initial setup.
 
  All Dapp programers have to do to integrate our extension is include the following code in a browser where our extension is installed.
@@ -88,11 +88,12 @@ We are blazing the trail for web3 credit and expanding adoption from our initial
 - The files realted to the extension can be found inside [Swip3 Extension](/Swip3%20Extension/) and detials explaining the file strucutre is found in the [Readme](/Swip3%20Extension/README.md) in that folder.
   
 - The Contracts are found in [Swip3 Contracts](/Swip3%20Contracts/) and here is a short description of all the extensions (more detials can be found in the comments themselvs).
-  - [LendingPool.sol](/Swip3%20Contracts/contracts/LendingPool.sol): A sample lending pool with basic lending pool functionalities, going to be replaced with copperations with existing lending protocols like AAVE, Compund and Maker DAO in future updates.
-  - [LendingPoolGate.sol](/Swip3%20Contracts/contracts/LendingPoolGate.sol): A secruity feature to filter access to lending pool
   - [Swip3.sol](/Swip3%20Contracts/contracts/Swip3.sol): Our protocol and credit system MVP.
   - [Swip3Customer.sol](/Swip3%20Contracts/contracts/Swip3Customer.sol): Credit contract that is going to be credit between our Swip3 contract and users
 
+  - [LendingPool.sol](/Swip3%20Contracts/contracts/LendingPool.sol): A sample lending pool with basic lending pool functionalities, going to be replaced with copperations with existing lending protocols like AAVE, Compund and Maker DAO in future updates.
+  - [LendingPoolGate.sol](/Swip3%20Contracts/contracts/LendingPoolGate.sol): A secruity feature to filter access to lending pool
+  
 ## Teams
 
 We are a team of three enthusiastic builders who wish to add thier positive fingerprints to the growing human advancment. We love web3 because there is 
